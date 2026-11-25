@@ -1,13 +1,13 @@
-export function AreaCard() {
+export function AreaCard({data}) {
     return (
-        <div class="bg-[#FF4D6D] text-white border-4 border-black p-4 md:p-5 shadow-[6px_6px_0px_0px_#000] hover:-translate-y-1 transition-transform flex flex-col items-center text-center gap-2">
-            <div class="w-12 h-12 bg-white border-2 border-black rounded-full flex items-center justify-center">
-                <svg class="w-7 h-7 text-[#FF4D6D]" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="#000" stroke-width="1.5" />
+        <div className={`${data.colorFondo} ${data.colorTexto} border-4 border-black p-4 md:p-5 shadow-[6px_6px_0px_0px_#000] hover:-translate-y-1 transition-transform flex flex-col items-center text-center gap-2`}>
+            <div className={`${data.iconoFondo} ${data.iconoForma} ${data.iconoRotacion} w-12 h-12 border-2 border-black rounded-full flex items-center justify-center`}>
+                <svg className={`w-7 h-7 ${data.iconoColor}`} viewBox="0 0 24 24" fill="currentColor">
+                    <path d={data.iconoPath} stroke="#000" stroke-width="1.5" />
                 </svg>
             </div>
-            <h3 class="font-black text-sm md:text-base uppercase tracking-wide">Cardiología</h3>
-            <p class="text-xs font-bold leading-snug hidden sm:block">Electrocardiogramas, ecocardio y chequeo preventivo.</p>
+            <h3 className="font-black text-sm md:text-base uppercase tracking-wide">{data.titulo}</h3>
+            <p className="text-xs font-bold leading-snug hidden sm:block">{data.descripcion}</p>
         </div>
     )
 }

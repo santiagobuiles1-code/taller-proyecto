@@ -1,5 +1,7 @@
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
+import { tecnologia } from "../data/dataClinica"
+import { ClinicaCard } from "../components/ClinicaCard"
 
 export function Tecnologia() {
     return (
@@ -43,26 +45,11 @@ export function Tecnologia() {
                         <p class="font-bold text-xs sm:text-sm">Infraestructura diseñada para darte diagnósticos precisos en minutos.</p>
 
                         <div class="grid grid-cols-2 gap-3">
-                            <div class="bg-[#FFFDF5] border-4 border-black p-4 shadow-[4px_4px_0px_0px_#000]">
-                                <span class="inline-block px-2 py-0.5 bg-[#FFD600] border border-black font-black text-[10px] uppercase mb-2">Imagen</span>
-                                <h3 class="font-black text-sm uppercase">Resonancia 3T</h3>
-                                <p class="text-xs font-medium text-neutral-700 mt-1">Alta definición en tiempo récord.</p>
-                            </div>
-                            <div class="bg-[#FFFDF5] border-4 border-black p-4 shadow-[4px_4px_0px_0px_#000]">
-                                <span class="inline-block px-2 py-0.5 bg-[#72EFDD] border border-black font-black text-[10px] uppercase mb-2">App</span>
-                                <h3 class="font-black text-sm uppercase">Historial Cloud</h3>
-                                <p class="text-xs font-medium text-neutral-700 mt-1">Tus recetas y estudios en tu móvil.</p>
-                            </div>
-                            <div class="bg-[#FFFDF5] border-4 border-black p-4 shadow-[4px_4px_0px_0px_#000]">
-                                <span class="inline-block px-2 py-0.5 bg-[#C8B6FF] border border-black font-black text-[10px] uppercase mb-2">Lab</span>
-                                <h3 class="font-black text-sm uppercase">Resultados Express</h3>
-                                <p class="text-xs font-medium text-neutral-700 mt-1">Entrega digital en menos de 3 horas.</p>
-                            </div>
-                            <div class="bg-[#FFFDF5] border-4 border-black p-4 shadow-[4px_4px_0px_0px_#000]">
-                                <span class="inline-block px-2 py-0.5 bg-[#FF4D6D] text-white border border-black font-black text-[10px] uppercase mb-2">24H</span>
-                                <h3 class="font-black text-sm uppercase">Farmacia Propia</h3>
-                                <p class="text-xs font-medium text-neutral-700 mt-1">Surtido inmediato al salir de consulta.</p>
-                            </div>
+                            {
+                                tecnologia.map((item) =>(
+                                    <ClinicaCard data={item}/>
+                                ))
+                            }
                         </div>
                     </div>
 
