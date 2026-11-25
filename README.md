@@ -1,0 +1,8 @@
+- **Nombre completo:** Santiago Builes Marulanda
+- **Documento de identidad:** 1025655679
+- **Ficha:** 3410947
+- **Programa de formación:** ADSO
+- **Correo personal:** santiagobuiles1@gmail.com
+- **Usuario / Enlace de GitHub:** santiagobuiles1-code
+- **Diseño asignado:** Memphis (Centro Médico)
+- **Presentacion Breve** En este proyecto hare una migración de un archivo hmtl, para dividir por componentes principales y reutilizables cada etiqueta principal html como header, main, section, etc.
