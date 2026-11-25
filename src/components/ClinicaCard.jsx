@@ -1,0 +1,9 @@
+export function ClinicaCard() {
+    return (
+        <div class="bg-[#FFFDF5] border-4 border-black p-4 shadow-[4px_4px_0px_0px_#000]">
+            <span class="inline-block px-2 py-0.5 bg-[#FFD600] border border-black font-black text-[10px] uppercase mb-2">Imagen</span>
+            <h3 class="font-black text-sm uppercase">Resonancia 3T</h3>
+            <p class="text-xs font-medium text-neutral-700 mt-1">Alta definición en tiempo récord.</p>
+        </div>
+    )
+}
