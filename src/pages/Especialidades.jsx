@@ -1,6 +1,6 @@
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
-import { especialidad } from "../data/data"
+import { especialidad } from "../data/dataEspecialidad"
 import { AreaCard } from "../components/AreaCard"
 
 export function Especialidades() {

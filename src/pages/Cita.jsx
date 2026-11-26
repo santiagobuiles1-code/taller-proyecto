@@ -1,5 +1,9 @@
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
+import { CitaInput } from "../components/CitaInput"
+import { inputData } from "../data/inputData"
+import { horarios } from "../data/dataBotonCita"
+import { ButtonCita } from "../components/ButtonCita"
 
 export function Cita() {
     return (
@@ -26,15 +30,15 @@ export function Cita() {
 
                         {/* <!-- Horarios Visuales --> */}
                         <div class="grid grid-cols-3 gap-2">
-                            <button type="button" class="py-2 bg-[#72EFDD] border-2 border-black font-black text-sm shadow-[3px_3px_0px_0px_#000] hover:bg-[#3A86FF] hover:text-white transition-colors">09:00</button>
-                            <button type="button" class="py-2 bg-white border-2 border-black font-black text-sm shadow-[3px_3px_0px_0px_#000] hover:bg-[#3A86FF] hover:text-white transition-colors">11:30</button>
-                            <button type="button" class="py-2 bg-[#C8B6FF] border-2 border-black font-black text-sm shadow-[3px_3px_0px_0px_#000] hover:bg-[#3A86FF] hover:text-white transition-colors">16:00</button>
+                            {horarios.map((item) => (
+                                <ButtonCita data={item}/>
+                            ))}
                         </div>
 
                         {/* <!-- Inputs --> */}
                         <div class="flex flex-col gap-2.5">
-                            <input type="text" placeholder="Nombre completo" class="w-full px-4 py-2 bg-white border-2 border-black font-bold text-sm focus:outline-none focus:bg-[#72EFDD]" />
-                            <input type="tel" placeholder="Teléfono / WhatsApp" class="w-full px-4 py-2 bg-white border-2 border-black font-bold text-sm focus:outline-none focus:bg-[#72EFDD]" />
+                            {inputData.map((item) =>(
+                                <CitaInput data={item}/>))}
                             <select class="w-full px-4 py-2 bg-white border-2 border-black font-bold text-sm focus:outline-none focus:bg-[#72EFDD]">
                                 <option>Medicina General</option>
                                 <option>Cardiología</option>
